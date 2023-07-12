@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+
 }
 
 body {
@@ -13,6 +14,20 @@ body {
   line-height: 1.5;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+:focus {
+  color: red;
+}
+
 input {
   padding: 8px;
   font: inherit;
@@ -21,4 +36,20 @@ input {
 button {
   padding: 8px 12px;
   cursor: pointer;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+
+}
+
+.gallery>li {
+  border: thick double #32a1ce;
+  width: 310px;
+  height: 210px;
+}
+
+.task-02-ul {
+  list-style: auto;
 }
