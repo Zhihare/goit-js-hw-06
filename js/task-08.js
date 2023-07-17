@@ -1,6 +1,7 @@
 
 
-const form = document.querySelector(".login-form")
+const form = document.querySelector(".login-form");
+const saveMailPass = {};
 
 
 form.addEventListener("submit", dataUser)
@@ -13,18 +14,15 @@ function dataUser(e) {
         alert('Заповніть пусті поля!')
     }
     else {
-        const saveMailPass = {
-            email: [],
-            password: [],
-        }
-        saveMailPass.email.push(email);
-        saveMailPass.password.push(pass);
-        form.reset();
+        saveMailPass.email = email.value;
+        saveMailPass.password = pass.value;
+
         console.log(saveMailPass);
     }
     // console.dir(form);
-    // console.log(email);
-    // console.log(pass);
+    console.log(email);
+    console.log(pass);
+    form.reset();
 
 
 
