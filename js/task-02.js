@@ -6,10 +6,14 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const container = document.getElementById("ingredients");
-for (const ingredient of ingredients) {
-  const liEl = document.createElement("li");
-  liEl.textContent = ingredient;
-}
+const conteiner = document.querySelector('#ingredients');
 
-container.appendChild(...liEl);
+const contRef = ingredients.map((ingredient) => {
+  const liEl = document.createElement('li');
+  liEl.textContent = ingredient;
+  liEl.classList.add('item');
+  return liEl;
+});
+
+conteiner.append(...contRef);
+

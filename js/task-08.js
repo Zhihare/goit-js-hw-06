@@ -14,12 +14,12 @@ function dataUser(e) {
         alert('Заповніть пусті поля!')
     }
     else {
-        saveMailPass.email = email.value;
-        saveMailPass.password = pass.value;
+        saveMailPass.email = email;
+        saveMailPass.password = pass;
 
         console.log(saveMailPass);
     }
-    // console.dir(form);
+
     console.log(email);
     console.log(pass);
     form.reset();
