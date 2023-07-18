@@ -23,8 +23,5 @@ function dataUser(e) {
     console.log(email);
     console.log(pass);
     form.reset();
-
-
-
 }
 
