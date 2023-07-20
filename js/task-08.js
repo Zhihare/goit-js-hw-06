@@ -20,8 +20,6 @@ function dataUser(e) {
         console.log(saveMailPass);
     }
 
-    console.log(email);
-    console.log(pass);
     form.reset();
 }
 
