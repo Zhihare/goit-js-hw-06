@@ -12,23 +12,33 @@ const inputNumbers = document.querySelector(".numDiv");
 
 dataCreate.addEventListener("click", createBoxes());
 dataDestroy.addEventListener("click", destroyBoxes());
+inputNumbers.addEventListener("input", nambersDiv());
 
+let inputValue = 0;
+
+function nambersDiv(event) {
+  inputValue = event.currentTarget.value;
+  console.log(inputValue);
+}
 function createBoxes(amount) {
-  // console.dir(dataCreate);
-  // console.dir(controlBut);
-
-  if (inputNumbers.value === "" || inputNumbers.value > 100) {
-    return 'Ввведіть кількість';
+  let divArray = [];
+  let sizeDefault = 30;
+  for (let i = 0; i < amount; i += 1) {
+    sizeDefault += 10;
+    const divElement = document.createElement('div');
+    divElement.classList = 'item';
+    divElement.style.height = `${sizeDefault}px`;
+    divElement.style.width = `${sizeDefault}px`;
+    divElement.style.marginRight = '30px';
+    divElement.style.marginBottom = '30px';
+    divElement.style.backgroundColor = getRandomHexColor();
+    divArray.push(divElement);
+    // divBoxesEl.appendChild(divElement);
   }
-  // else {
-  //   let inputNum = inputNumbers.value;
-  //   console.dir(inputNum)
-  //   for (let i = 0; i < amount; i += 1) {
-  //     const addEll = createEl.createElement("div")
-  //   }
-  // }
+  return divBoxesEl.append(...divArray);
 }
 
-function destroyBoxes() {
-
+function destroyBoxesMarkup() {
+  inputNumberEl.value = '';
+  return (divBoxesEl.innerHTML = '');
 }
